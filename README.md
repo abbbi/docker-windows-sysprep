@@ -24,7 +24,7 @@ create a snapshot image with the same size as base image using unsafe option:
  qemu-img create -b /base-image/data.qcow2 data.qcow2 -u -F qcow2 -f qcow2 68719476736B
 ```
 
-now change the file in /tmp/clone-windows to share the following volumes
+now change the file in /tmp/clone-windows/compose.yaml to share the following volumes
 and set another unique container name:
 
     container_name: windows_clone
@@ -32,9 +32,15 @@ and set another unique container name:
       - /tmp/docker-windows-sysprep/:/base-image/
       - /tmp/clone-windows:/storage 
 
+And again
+
+```
+ docker compose up
+```
+
 This will result in the base image located in /tmp/socker-windows-sysprep to be
 used as backing image and the snapshot in /tmp/clone-windows to be used for
 write operations.
 
-This way you can spin up multiple instances using the same base image running
-on snapshots.
+This way you can spin up multiple instances using the same base image, like
+for example vagrant does.
