@@ -9,7 +9,7 @@
 
 -> This will install windows server 2025 and as last step finalize the image
 using sysprep. The docker Container will shut down after this. (note that
-the Username/Password for the compose action are overwritten by oem/2025/unattend.xml)
+the Username/Password for the compose action are overwritten by oem/unattend.xml)
 
 Now you can use the sysprepped image "data.qcow2" as base image for further
 startups, like so:
