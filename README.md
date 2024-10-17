@@ -1,4 +1,4 @@
-== Sysprepped images using dockur/windows ==
+# Sysprepped /snapshot images using dockur/windows
 
 ```
  cd /tmp/
