@@ -15,5 +15,5 @@ services:
       - 3390:3389/udp
     volumes:
       - /tmp/docker-windows-sysprep/:/storage
-      - /tmp/docker-windows-sysprep/oem/2025:/oem
+      - /tmp/docker-windows-sysprep/oem/:/oem
     stop_grace_period: 2m
